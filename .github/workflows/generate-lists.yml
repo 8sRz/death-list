@@ -26,13 +26,13 @@ jobs:
 
       - name: Generate Lists
         run: |
-          python generate_lists.py  # Run your script to generate the lists
+          python ./program/generate_lists.py  # Run your script to generate the lists
 
       - name: Commit and Push Changes
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add ./explicit/master.txt ./explicit/abp.txt
+          git add ./program/output ./explicit/master.txt ./explicit/abp.txt
           git commit -m "Automated update of generated lists"
           git push
         env:
