@@ -9,7 +9,7 @@ source_file = os.path.join(folder_path, 'source.txt')
 master_file = os.path.join(folder_path, 'master.txt')
 abp_file = os.path.join(folder_path, 'abp.txt')
 whitelist_file = "./program/whitelists.txt"  # Root directory whitelist file
-output_file = "./prgoram/output.txt"  # Output log file
+output_file = "./program/output.txt"  # Output log file
 
 # Open output file for writing logs
 with open(output_file, 'w') as output:
