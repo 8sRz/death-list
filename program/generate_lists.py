@@ -8,7 +8,7 @@ folder_path = "./explicit"
 source_file = os.path.join(folder_path, 'source.txt')
 master_file = os.path.join(folder_path, 'master.txt')
 abp_file = os.path.join(folder_path, 'abp.txt')
-whitelist_file = "./program/whitelists.txt"  # Root directory whitelist file
+whitelist_file = "./program/whitelist.txt"  # Root directory whitelist file
 output_file = "./program/output.txt"  # Output log file
 
 # Open output file for writing logs
