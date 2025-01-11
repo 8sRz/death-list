@@ -1,2 +1,1 @@
-Warning: Whitelist file './program/whitelists.txt' not found. No domains were whitelisted.
 Processing complete
