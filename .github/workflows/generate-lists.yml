@@ -32,7 +32,7 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add ./explicit/apex_vanilla.txt ./explicit/apex_abp.txt ./explicit/subdomain_vanilla.txt ./program/output.txt
+          git add ./explicit/apex_plain.txt ./explicit/apex_abp.txt ./explicit/subdomain_plain.txt ./program/output.txt
           git commit -m "Automated update of generated lists"
           git push
         env:
