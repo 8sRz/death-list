@@ -6,9 +6,9 @@ folder_path = "./explicit"
 
 # File paths
 source_file = os.path.join(folder_path, 'source.txt')
-master_file = os.path.join(folder_path, 'master.txt')
-abp_file = os.path.join(folder_path, 'abp.txt')
-subdomains_file = os.path.join(folder_path, 'subdomains.txt')
+master_file = os.path.join(folder_path, 'apex_plain.txt')
+abp_file = os.path.join(folder_path, 'apex_abp.txt')
+subdomains_file = os.path.join(folder_path, 'subdomain_plain.txt')
 whitelist_file = "./program/whitelist.txt"  # Root directory whitelist file
 output_file = "./program/output.txt"  # Output log file
 
