@@ -8,6 +8,7 @@ folder_path = "./explicit"
 source_file = os.path.join(folder_path, 'source.txt')
 master_file = os.path.join(folder_path, 'master.txt')
 abp_file = os.path.join(folder_path, 'abp.txt')
+subdomains_file = os.path.join(folder_path, 'subdomains.txt')
 whitelist_file = "./program/whitelist.txt"  # Root directory whitelist file
 output_file = "./program/output.txt"  # Output log file
 
@@ -18,10 +19,11 @@ with open(output_file, 'w') as output:
     with open(source_file, 'r') as file:
         lines = file.readlines()
 
-    # Initialize set for registered domains (to ensure uniqueness)
+    # Initialize sets for registered domains and subdomains
     registered_domains = set()
+    subdomains = set()
 
-    # Process each line
+    # Process each line in source.txt
     for line_number, line in enumerate(lines, start=1):  # Keep track of line numbers
         domain = line.strip()  # Remove any leading/trailing whitespace
         if not domain:  # Skip empty lines
@@ -34,13 +36,14 @@ with open(output_file, 'w') as output:
         registered_domain = extracted.registered_domain
 
         if registered_domain:
-            registered_domains.add(registered_domain)
+            registered_domains.add((registered_domain, domain))  # Store both registrable and full domain
         else:
-            # Print an error if the domain is invalid
+            # Log an error if the domain is invalid
             log_message = f"Error: Invalid domain on line {line_number}: '{domain}'\n"
             output.write(log_message)
 
     # Read domains from whitelists.txt
+    whitelisted_domains = set()
     if os.path.exists(whitelist_file):
         with open(whitelist_file, 'r') as file:
             whitelist_lines = file.readlines()
@@ -58,17 +61,26 @@ with open(output_file, 'w') as output:
             registered_domain = extracted.registered_domain
 
             if registered_domain:
-                registered_domains.discard(registered_domain)  # Remove from registered domains if present
+                whitelisted_domains.add(registered_domain)
             else:
-                # Print an error if the domain is invalid
+                # Log an error if the domain is invalid
                 log_message = f"Error: Invalid domain in whitelist file on line {line_number}: '{domain}'\n"
                 output.write(log_message)
     else:
         log_message = f"Warning: Whitelist file '{whitelist_file}' not found. No domains were whitelisted.\n"
         output.write(log_message)
 
-    # Sort the registered domains
-    sorted_domains = sorted(registered_domains)
+    # Process registered domains and filter out subdomains
+    final_registered_domains = set()
+    for registered_domain, full_domain in registered_domains:
+        if registered_domain in whitelisted_domains:
+            subdomains.add(full_domain)  # Add full domain to subdomains if its registrable part is whitelisted
+        else:
+            final_registered_domains.add(registered_domain)
+
+    # Sort the final registered domains and subdomains
+    sorted_domains = sorted(final_registered_domains)
+    sorted_subdomains = sorted(subdomains)
 
     # Generate entries for master.txt and ABP.txt
     master_entries = [f"{domain}\n" for domain in sorted_domains]
@@ -81,6 +93,10 @@ with open(output_file, 'w') as output:
     # Write to ABP.txt
     with open(abp_file, 'w') as file:
         file.writelines(abp_entries)
+
+    # Write to subdomains.txt
+    with open(subdomains_file, 'w') as file:
+        file.writelines([f"{domain}\n" for domain in sorted_subdomains])
 
     log_message = "Processing complete\n"
     output.write(log_message)
