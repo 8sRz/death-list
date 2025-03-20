@@ -8,6 +8,7 @@ folder_path = "./explicit"
 source_file = os.path.join(folder_path, 'source.txt')
 master_file = os.path.join(folder_path, 'apex_plain.txt')
 abp_file = os.path.join(folder_path, 'apex_abp.txt')
+unbound_file = os.path.join(folder_path, 'apex_unbound.txt')
 subdomains_file = os.path.join(folder_path, 'subdomain_plain.txt')
 whitelist_file = "./program/whitelist.txt"  # Root directory whitelist file
 output_file = "./program/output.txt"  # Output log file
@@ -85,6 +86,7 @@ with open(output_file, 'w') as output:
     # Generate entries for master.txt and ABP.txt
     master_entries = [f"{domain}\n" for domain in sorted_domains]
     abp_entries = [f"||{domain}^\n" for domain in sorted_domains]
+    unbound_entries = [f"{domain}\n*.{domain}\n" for domain in sorted_domains]
 
     # Write to master.txt
     with open(master_file, 'w') as file:
@@ -93,6 +95,10 @@ with open(output_file, 'w') as output:
     # Write to ABP.txt
     with open(abp_file, 'w') as file:
         file.writelines(abp_entries)
+
+    # Write to apex_unbound.txt
+    with open(unbound_file, 'w') as file:
+        file.writelines(unbound_entries)
 
     # Write to subdomains.txt
     with open(subdomains_file, 'w') as file:
