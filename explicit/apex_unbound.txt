@@ -13648,6 +13648,8 @@ nineteenpussy.com
 *.nineteenpussy.com
 nineteentube.com
 *.nineteentube.com
+ninfomaniacas.blog
+*.ninfomaniacas.blog
 nips.com
 *.nips.com
 nitrovideo.com
@@ -22968,6 +22970,8 @@ xvideohard.com
 *.xvideohard.com
 xvideoporno.tv
 *.xvideoporno.tv
+xvideos-br.com
+*.xvideos-br.com
 xvideos-cdn.com
 *.xvideos-cdn.com
 xvideos-desi.com
