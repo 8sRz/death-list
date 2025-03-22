@@ -4872,6 +4872,8 @@ dewafilm.xyz
 *.dewafilm.xyz
 dfge.art
 *.dfge.art
+dialog-mebel.ru
+*.dialog-mebel.ru
 dianafiles.com
 *.dianafiles.com
 dianamovies.com
@@ -6210,6 +6212,8 @@ femjoy.com
 *.femjoy.com
 femjoybabes.com
 *.femjoybabes.com
+feneo.vip
+*.feneo.vip
 fenixhentai.net
 *.fenixhentai.net
 fenoxo.com
@@ -8926,6 +8930,8 @@ hentaiworld.tv
 *.hentaiworld.tv
 hentaixyuri.com
 *.hentaixyuri.com
+hentaiyes.com
+*.hentaiyes.com
 hentaiyume.com
 *.hentaiyume.com
 hentaizilla.com
@@ -12032,6 +12038,8 @@ mammasporn.com
 *.mammasporn.com
 mandanudes.com.br
 *.mandanudes.com.br
+manga18.club
+*.manga18.club
 mangago.me
 *.mangago.me
 mangahentai.me
@@ -16438,6 +16446,8 @@ pornxxx.sex
 *.pornxxx.sex
 pornxxx.su
 *.pornxxx.su
+pornxxx.tube
+*.pornxxx.tube
 pornxxx.tv
 *.pornxxx.tv
 pornxxx24.com
@@ -21272,6 +21282,8 @@ ukdevilz.com
 *.ukdevilz.com
 ukfucking.com
 *.ukfucking.com
+ullu.quest
+*.ullu.quest
 ulmf.org
 *.ulmf.org
 uloversdoll.com
@@ -21316,8 +21328,12 @@ uncutjalwa.com
 *.uncutjalwa.com
 uncutjalwa.net
 *.uncutjalwa.net
+uncutmasti.com
+*.uncutmasti.com
 uncutmasti.org
 *.uncutmasti.org
+uncutmaza.cc
+*.uncutmaza.cc
 under-feet.com
 *.under-feet.com
 underhentai.net
