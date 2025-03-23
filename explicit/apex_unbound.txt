@@ -8756,6 +8756,8 @@ hentaicore.org
 *.hentaicore.org
 hentaicrafts.com
 *.hentaicrafts.com
+hentaidad.com
+*.hentaidad.com
 hentaidirectory.org
 *.hentaidirectory.org
 hentaidude.com
@@ -8942,6 +8944,8 @@ hentaiworld.tv
 *.hentaiworld.tv
 hentaixyuri.com
 *.hentaixyuri.com
+hentaiyaoi.net
+*.hentaiyaoi.net
 hentaiyes.com
 *.hentaiyes.com
 hentaiyume.com
@@ -12062,6 +12066,8 @@ mangahentai.me
 *.mangahentai.me
 mangar18.com
 *.mangar18.com
+mangayaoi.net
+*.mangayaoi.net
 mangoporn.net
 *.mangoporn.net
 mangovideo.pw
@@ -13698,6 +13704,8 @@ nhentaihaven.org
 *.nhentaihaven.org
 nhentaitube.com
 *.nhentaitube.com
+nhentaiyaoi.net
+*.nhentaiyaoi.net
 nicedesiporn.com
 *.nicedesiporn.com
 nicegranny.com
